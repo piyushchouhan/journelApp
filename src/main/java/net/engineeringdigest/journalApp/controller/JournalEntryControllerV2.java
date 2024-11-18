@@ -9,36 +9,33 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/journal")
-public class JournalEntryController {
+@RequestMapping("/api/v2/journal")
+public class JournalEntryControllerV2 {
 
-    private Map<Long, JournalEntry> journelEntries = new HashMap<>();
+
 
     @GetMapping("/abc")
-    public List<JournalEntry> getAll(){
-        return new ArrayList<>(journelEntries.values());
+    public List<JournalEntry> getAll() {
+        return null;
     }
 
     @PostMapping("/abc")
     public JournalEntry addEntry(@RequestBody JournalEntry entry){
-        entry.setId(journelEntries.size() + 1);
-        journelEntries.put(entry.getId(), entry);
-        return entry;
+       return null;
     }
 
     @GetMapping("/abc/{id}")
     public JournalEntry getJournalById(@PathVariable Long id){
-        return  journelEntries.get(id);
+        return null;
     }
 
     @DeleteMapping("/abc/{id}")
     public JournalEntry deleteJournalById(@PathVariable Long id){
-        return journelEntries.remove(id);
+       return null;
     }
 
     @PutMapping("/abc/{id}")
     public JournalEntry updateJournalById(@PathVariable Long id, @RequestBody JournalEntry entry){
-        entry.setId(id);
-        return journelEntries.put(id, entry);
+        return null;
     }
 }
