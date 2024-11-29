@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/v2/journal")
+@RequestMapping("/api/journal")
 public class JournalEntryControllerV2 {
 
     @Autowired
