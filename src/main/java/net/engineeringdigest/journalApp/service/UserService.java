@@ -1,8 +1,6 @@
 package net.engineeringdigest.journalApp.service;
 
-import net.engineeringdigest.journalApp.entity.JournalEntry;
 import net.engineeringdigest.journalApp.entity.User;
-import net.engineeringdigest.journalApp.repository.JournalEntryRepository;
 import net.engineeringdigest.journalApp.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,11 +40,11 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<User> getJournalById(ObjectId id){
+    public Optional<User> getUserById(ObjectId id){
         return userRepository.findById(id);
     }
 
-    public void deleteJournalById(ObjectId id){
+    public void deleteUserById(ObjectId id){
         userRepository.deleteById(id);
     }
 
