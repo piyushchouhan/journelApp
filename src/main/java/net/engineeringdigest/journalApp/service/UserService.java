@@ -33,8 +33,6 @@ public class UserService {
             userRepository.save(user);
             return true;
         }catch (Exception e){
-            log.warn("Error saving user");
-            log.debug("Error saving user");
             return false;
         }
     }
