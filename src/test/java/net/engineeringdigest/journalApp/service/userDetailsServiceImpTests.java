@@ -19,7 +19,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.Collections;
 
-@Disabled
 @ExtendWith(MockitoExtension.class)
 public class userDetailsServiceImpTests {
 
