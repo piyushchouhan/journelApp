@@ -13,7 +13,7 @@ import java.util.Map;
 @Component
 public class AppCache {
     public enum keys{
-        WEATHER_API,;
+        weather_api;
     }
     public Map<String, String> APP_CACHE = new HashMap<>();
 
