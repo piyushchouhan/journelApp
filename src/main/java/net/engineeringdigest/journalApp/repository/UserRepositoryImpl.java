@@ -15,7 +15,11 @@ public class UserRepositoryImpl {
 
     public List<User> getUserForSA(){
         Query query = new Query();
-        query.addCriteria(Criteria.where("name").is("Piyush"));
+        Criteria criteria = new Criteria();
+        query.addCriteria(
+                criteria.orOperator(Criteria.where("email").exists(true),
+                Criteria.where("sentimentAnalysis").is(true))
+        );
         return mongoTemplate.find(query, User.class);
     }
 }
